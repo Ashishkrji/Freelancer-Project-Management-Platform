@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreelancerPro - Project Management Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-laptop-code"></i> FreelancerPro</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#dashboard" class="nav-link active" data-view="dashboard">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-view="projects">
+                        <i class="fas fa-folder-open"></i> Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#payments" class="nav-link" data-view="payments">
+                        <i class="fas fa-money-bill-wave"></i> Payments
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#invoices" class="nav-link" data-view="invoices">
+                        <i class="fas fa-file-invoice-dollar"></i> Invoices
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-info">
+                    <span>John Doe</span>
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=random" alt="User">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard View -->
+        <section id="dashboard" class="view active">
+            <div class="container">
+                <h1 class="page-title">Dashboard</h1>
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon income">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Income</h3>
+                            <p class="stat-value">$12,450</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon projects">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Active Projects</h3>
+                            <p class="stat-value">8</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon pending">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Pending Payments</h3>
+                            <p class="stat-value">$3,200</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon clients">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Clients</h3>
+                            <p class="stat-value">12</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="recent-section">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-check-circle completed"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Website Redesign Completed</h4>
+                                <p>Project for TechCorp finished on June 15, 2023</p>
+                            </div>
+                            <div class="activity-time">2 days ago</div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-file-invoice invoice"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Invoice #INV-2023-007 Sent</h4>
+                                <p>Sent to Creative Solutions for $1,200</p>
+                            </div>
+                            <div class="activity-time">3 days ago</div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-plus-circle project"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New Project Added</h4>
+                                <p>Mobile App Development for StartupX</p>
+                            </div>
+                            <div class="activity-time">1 week ago</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upcoming Deadlines -->
+                <div class="upcoming-section">
+                    <h2>Upcoming Deadlines</h2>
+                    <div class="deadline-list">
+                        <div class="deadline-item">
+                            <div class="deadline-status urgent"></div>
+                            <div class="deadline-details">
+                                <h4>E-commerce Website</h4>
+                                <p>Due: June 30, 2023</p>
+                            </div>
+                            <div class="deadline-days">5 days left</div>
+                        </div>
+                        
+                        <div class="deadline-item">
+                            <div class="deadline-status warning"></div>
+                            <div class="deadline-details">
+                                <h4>Logo Design</h4>
+                                <p>Due: July 5, 2023</p>
+                            </div>
+                            <div class="deadline-days">10 days left</div>
+                        </div>
+                        
+                        <div class="deadline-item">
+                            <div class="deadline-status normal"></div>
+                            <div class="deadline-details">
+                                <h4>SEO Optimization</h4>
+                                <p>Due: July 15, 2023</p>
+                            </div>
+                            <div class="deadline-days">20 days left</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects View -->
+        <section id="projects" class="view">
+            <div class="container">
+                <div class="header-with-button">
+                    <h1 class="page-title">Projects</h1>
+                    <button class="btn primary" id="addProjectBtn">
+                        <i class="fas fa-plus"></i> Add New Project
+                    </button>
+                </div>
+                
+                <!-- Project Filters -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Status:</label>
+                        <select id="statusFilter">
+                            <option value="all">All Statuses</option>
+                            <option value="planning">Planning</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="review">Review</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Client:</label>
+                        <select id="clientFilter">
+                            <option value="all">All Clients</option>
+                            <option value="techcorp">TechCorp</option>
+                            <option value="creativesolutions">Creative Solutions</option>
+                            <option value="startupx">StartupX</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Projects Table -->
+                <div class="table-container">
+                    <table class="projects-table">
+                        <thead>
+                            <tr>
+                                <th>Project</th>
+                                <th>Client</th>
+                                <th>Status</th>
+                                <th>Deadline</th>
+                                <th>Budget</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="projectsTableBody">
+                            <tr>
+                                <td>
+                                    <div class="project-info">
+                                        <h4>Website Redesign</h4>
+                                        <p>TechCorp</p>
+                                    </div>
+                                </td>
+                                <td>TechCorp</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td>Jun 15, 2023</td>
+                                <td>$5,000</td>
+                                <td>
+                                    <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <div class="project-info">
+                                        <h4>E-commerce Website</h4>
+                                        <p>Creative Solutions</p>
+                                    </div>
+                                </td>
+                                <td>Creative Solutions</td>
+                                <td><span class="status-badge in-progress">In Progress</span></td>
+                                <td>Jun 30, 2023</td>
+                                <td>$8,500</td>
+                                <td>
+                                    <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <div class="project-info">
+                                        <h4>Mobile App</h4>
+                                        <p>StartupX</p>
+                                    </div>
+                                </td>
+                                <td>StartupX</td>
+                                <td><span class="status-badge review">Review</span></td>
+                                <td>Jul 10, 2023</td>
+                                <td>$12,000</td>
+                                <td>
+                                    <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <div class="project-info">
+                                        <h4>Logo Design</h4>
+                                        <p>BrandCo</p>
+                                    </div>
+                                </td>
+                                <td>BrandCo</td>
+                                <td><span class="status-badge planning">Planning</span></td>
+                                <td>Jul 5, 2023</td>
+                                <td>$1,200</td>
+                                <td>
+                                    <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Payments View -->
+        <section id="payments" class="view">
+            <div class="container">
+                <div class="header-with-button">
+                    <h1 class="page-title">Payments</h1>
+                    <button class="btn primary" id="recordPaymentBtn">
+                        <i class="fas fa-plus"></i> Record Payment
+                    </button>
+                </div>
+                
+                <!-- Payment Summary -->
+                <div class="payment-summary">
+                    <div class="summary-card">
+                        <h3>Total Revenue</h3>
+                        <p class="amount">$12,450</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Pending Payments</h3>
+                        <p class="amount pending">$3,200</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Overdue</h3>
+                        <p class="amount overdue">$800</p>
+                    </div>
+                </div>
+                
+                <!-- Payments Table -->
+                <div class="table-container">
+                    <table class="payments-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Project</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paymentsTableBody">
+                            <tr>
+                                <td>TechCorp</td>
+                                <td>Website Redesign</td>
+                                <td>Jun 15, 2023</td>
+                                <td>$5,000</td>
+                                <td><span class="payment-status paid">Paid</span></td>
+                                <td>
+                                    <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Creative Solutions</td>
+                                <td>E-commerce Website</td>
+                                <td>-</td>
+                                <td>$8,500</td>
+                                <td><span class="payment-status pending">Pending</span></td>
+                                <td>
+                                    <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>StartupX</td>
+                                <td>Mobile App</td>
+                                <td>May 20, 2023</td>
+                                <td>$4,000</td>
+                                <td><span class="payment-status partial">Partial</span></td>
+                                <td>
+                                    <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>BrandCo</td>
+                                <td>Logo Design</td>
+                                <td>-</td>
+                                <td>$1,200</td>
+                                <td><span class="payment-status overdue">Overdue</span></td>
+                                <td>
+                                    <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Invoices View -->
+        <section id="invoices" class="view">
+            <div class="container">
+                <div class="header-with-button">
+                    <h1 class="page-title">Invoices</h1>
+                    <button class="btn primary" id="createInvoiceBtn">
+                        <i class="fas fa-plus"></i> Create Invoice
+                    </button>
+                </div>
+                
+                <!-- Invoice Filters -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Status:</label>
+                        <select id="invoiceStatusFilter">
+                            <option value="all">All Statuses</option>
+                            <option value="draft">Draft</option>
+                            <option value="sent">Sent</option>
+                            <option value="paid">Paid</option>
+                            <option value="overdue">Overdue</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Invoices Table -->
+                <div class="table-container">
+                    <table class="invoices-table">
+                        <thead>
+                            <tr>
+                                <th>Invoice #</th>
+                                <th>Client</th>
+                                <th>Date</th>
+                                <th>Due Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invoicesTableBody">
+                            <tr>
+                                <td>#INV-2023-007</td>
+                                <td>TechCorp</td>
+                                <td>Jun 15, 2023</td>
+                                <td>Jun 15, 2023</td>
+                                <td>$5,000</td>
+                                <td><span class="invoice-status paid">Paid</span></td>
+                                <td>
+                                    <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon print"><i class="fas fa-print"></i></button>
+                                    <button class="btn-icon send"><i class="fas fa-paper-plane"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#INV-2023-006</td>
+                                <td>Creative Solutions</td>
+                                <td>Jun 10, 2023</td>
+                                <td>Jun 25, 2023</td>
+                                <td>$8,500</td>
+                                <td><span class="invoice-status sent">Sent</span></td>
+                                <td>
+                                    <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon print"><i class="fas fa-print"></i></button>
+                                    <button class="btn-icon send"><i class="fas fa-paper-plane"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#INV-2023-005</td>
+                                <td>StartupX</td>
+                                <td>May 20, 2023</td>
+                                <td>Jun 5, 2023</td>
+                                <td>$4,000</td>
+                                <td><span class="invoice-status partial">Partial</span></td>
+                                <td>
+                                    <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon print"><i class="fas fa-print"></i></button>
+                                    <button class="btn-icon send"><i class="fas fa-paper-plane"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#INV-2023-004</td>
+                                <td>BrandCo</td>
+                                <td>May 5, 2023</td>
+                                <td>May 20, 2023</td>
+                                <td>$1,200</td>
+                                <td><span class="invoice-status overdue">Overdue</span></td>
+                                <td>
+                                    <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon print"><i class="fas fa-print"></i></button>
+                                    <button class="btn-icon send"><i class="fas fa-paper-plane"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modal for Adding Projects -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Project</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="projectForm">
+                    <div class="form-group">
+                        <label for="projectName">Project Name</label>
+                        <input type="text" id="projectName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="clientName">Client Name</label>
+                        <input type="text" id="clientName" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectStatus">Status</label>
+                            <select id="projectStatus" required>
+                                <option value="planning">Planning</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="review">Review</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectBudget">Budget ($)</label>
+                            <input type="number" id="projectBudget" min="0" step="0.01" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" id="startDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="endDate">End Date</label>
+                            <input type="date" id="endDate" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectDescription">Description</label>
+                        <textarea id="projectDescription" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn secondary" id="cancelProjectBtn">Cancel</button>
+                        <button type="submit" class="btn primary">Add Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Recording Payments -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Record Payment</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="paymentClient">Client</label>
+                        <select id="paymentClient" required>
+                            <option value="">Select Client</option>
+                            <option value="techcorp">TechCorp</option>
+                            <option value="creativesolutions">Creative Solutions</option>
+                            <option value="startupx">StartupX</option>
+                            <option value="brandco">BrandCo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="paymentProject">Project</label>
+                        <select id="paymentProject" required>
+                            <option value="">Select Project</option>
+                            <option value="website-redesign">Website Redesign</option>
+                            <option value="ecommerce-website">E-commerce Website</option>
+                            <option value="mobile-app">Mobile App</option>
+                            <option value="logo-design">Logo Design</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="paymentDate">Payment Date</label>
+                            <input type="date" id="paymentDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="paymentAmount">Amount ($)</label>
+                            <input type="number" id="paymentAmount" min="0" step="0.01" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method</label>
+                        <select id="paymentMethod" required>
+                            <option value="bank-transfer">Bank Transfer</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="check">Check</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="paymentNotes">Notes</label>
+                        <textarea id="paymentNotes" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn secondary" id="cancelPaymentBtn">Cancel</button>
+                        <button type="submit" class="btn primary">Record Payment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Creating Invoices -->
+    <div class="modal" id="invoiceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Invoice</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="invoiceForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="invoiceClient">Client</label>
+                            <select id="invoiceClient" required>
+                                <option value="">Select Client</option>
+                                <option value="techcorp">TechCorp</option>
+                                <option value="creativesolutions">Creative Solutions</option>
+                                <option value="startupx">StartupX</option>
+                                <option value="brandco">BrandCo</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="invoiceNumber">Invoice Number</label>
+                            <input type="text" id="invoiceNumber" value="INV-2023-008" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="invoiceDate">Invoice Date</label>
+                            <input type="date" id="invoiceDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="invoiceDueDate">Due Date</label>
+                            <input type="date" id="invoiceDueDate" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Items</label>
+                        <div class="invoice-items">
+                            <div class="item-row">
+                                <input type="text" placeholder="Description" class="item-desc">
+                                <input type="number" placeholder="Qty" class="item-qty" min="1" value="1">
+                                <input type="number" placeholder="Price" class="item-price" min="0" step="0.01">
+                                <button type="button" class="btn-icon remove-item"><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn secondary small" id="addItemRow">+ Add Item</button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="invoiceNotes">Notes</label>
+                        <textarea id="invoiceNotes" rows="3" placeholder="Terms, conditions, or additional notes"></textarea>
+                    </div>
+                    
+                    <div class="invoice-total">
+                        <div class="total-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Tax (10%):</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn secondary" id="cancelInvoiceBtn">Cancel</button>
+                        <button type="submit" class="btn primary">Create Invoice</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Invoice Preview Modal -->
+    <div class="modal" id="invoicePreviewModal">
+        <div class="modal-content invoice-preview">
+            <div class="modal-header">
+                <h2>Invoice Preview</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="invoice-header">
+                    <div class="invoice-logo">
+                        <h2>FreelancerPro</h2>
+                        <p>Professional Services</p>
+                    </div>
+                    <div class="invoice-details">
+                        <h3>INVOICE</h3>
+                        <p><strong>Invoice #:</strong> <span id="previewInvoiceNumber">INV-2023-008</span></p>
+                        <p><strong>Date:</strong> <span id="previewInvoiceDate">June 20, 2023</span></p>
+                        <p><strong>Due Date:</strong> <span id="previewDueDate">July 5, 2023</span></p>
+                    </div>
+                </div>
+                
+                <div class="invoice-parties">
+                    <div class="from-party">
+                        <h4>From:</h4>
+                        <p>John Doe<br>
+                        Freelance Developer<br>
+                        john@example.com<br>
+                        +1 (555) 123-4567</p>
+                    </div>
+                    
+                    <div class="to-party">
+                        <h4>To:</h4>
+                        <p id="previewClientInfo">TechCorp<br>
+                        123 Business Ave<br>
+                        San Francisco, CA 94107<br>
+                        contact@techcorp.com</p>
+                    </div>
+                </div>
+                
+                <div class="invoice-items-preview">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="previewItems">
+                            <tr>
+                                <td>Website Development</td>
+                                <td>1</td>
+                                <td>$5,000.00</td>
+                                <td>$5,000.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="invoice-totals">
+                    <div class="totals-section">
+                        <p><strong>Subtotal:</strong> <span id="previewSubtotal">$5,000.00</span></p>
+                        <p><strong>Tax (10%):</strong> <span id="previewTax">$500.00</span></p>
+                        <p class="grand-total"><strong>Total:</strong> <span id="previewTotal">$5,500.00</span></p>
+                    </div>
+                </div>
+                
+                <div class="invoice-notes">
+                    <p><strong>Notes:</strong></p>
+                    <p id="previewNotes">Thank you for your business. Payment is due within 15 days.</p>
+                </div>
+                
+                <div class="invoice-actions">
+                    <button class="btn secondary" id="printInvoiceBtn">
+                        <i class="fas fa-print"></i> Print Invoice
+                    </button>
+                    <button class="btn primary" id="sendInvoiceBtn">
+                        <i class="fas fa-paper-plane"></i> Send to Client
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
